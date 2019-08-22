@@ -1,17 +1,58 @@
-type:{{userType}}
+<div class="pull-right">
+  <label *ngIf="userType==2">Admin</label>
+  <label *ngIf="userType==1">User</label>
+  <input type="button" value="Logout" (click)="Logout()"/>
+</div>
+<div  *ngIf="userType==2" class="row">
+  Approve/ Decline Requests
+<table  class="table">
+  <thead>
+    <tr>
+      <th scope="col">User</th>
+      <th scope="col">Description</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let request of requestList">
+          <td>{{request.userName}}</td>
+          <td>{{request.description}}</td>
+            <td *ngIf="request.isApproved"><input class="btn btn-danger" type="button" value="Decline" (click)="updateRequest(request.requestId,0)"></td>
+            <td *ngIf="!request.isApproved"><input class="btn btn-primary" type="button" value="Approve" (click)="updateRequest(request.requestId,1)"></td>
+          
+          </tr>
+  
+  </tbody>
+</table>
+</div>
+<div *ngIf="userType==1" class="row">
 
-<div *ngIf="userType==1"><p>0</p></div>
-<div *ngIf="userType==2">
-    <table>
+  Submit Request
+<div class="col-md-6">
+  <textarea class="form-control" [(ngModel)]="requestModel.description">
+
+  </textarea>
+</div>
+<div class="col-md-4">
+  <input class="btn-primary" type="button" value="Submit Request" (click)="addRequest()">
+</div>
+
+    <table  class="table">
+      <thead>
         <tr>
-          <th *ngFor="let col of userList">
-            {{col.userName}}
-          </th>
+          <th scope="col">Request</th>
+          <th scope="col">Status</th>
         </tr>
-        <tr *ngFor="let char of characters | async">
-          <td *ngFor="let col of columns">
-            {{char[col]}}
-          </td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of requestList">
+        <td>{{request.description}}</td>
+          <td *ngIf="request.isApproved">Approved</td>
+          <td *ngIf="!request.isApproved">Pending</td>
+        
         </tr>
-      </table>
+      
+      </tbody>
+    </table>
+  
 </div>

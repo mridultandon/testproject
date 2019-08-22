@@ -43,7 +43,7 @@ namespace TestProject.Controllers
                 {
                     model.UserType = user.UserType;
                 }
-                return Ok(model);
+                return Ok(user);
             }
             catch(Exception ex)
             {

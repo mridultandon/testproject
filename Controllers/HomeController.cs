@@ -37,17 +37,15 @@ namespace TestProject.Controllers
         {
             try
             {
-                var user = _context.Set<RequestModel>().Where(x => x.UserId == model.UserId).FirstOrDefault();
-                if (user == null)
-                {
-                    _context.Add(model);
-                    _context.SaveChanges();
-                }
+
+                _context.Add(model);
+                _context.SaveChanges();
+
                 return Ok(model);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return BadRequest(ex);                    
+                return BadRequest(ex);
             }
         }
 
@@ -57,11 +55,10 @@ namespace TestProject.Controllers
         {
             try
             {
-                var user = _context.Set<RequestModel>().Where(x => x.UserId == model.UserId).FirstOrDefault();
+                var user = _context.Set<RequestModel>().Where(x => x.RequestId == model.RequestId).FirstOrDefault();
                 if (user != null)
                 {
                     user.Comment = model.Comment;
-                    user.Description = model.Description;
                     user.IsApproved = model.IsApproved;
                     _context.Update(user);
                     _context.SaveChanges();
@@ -80,7 +77,18 @@ namespace TestProject.Controllers
         {
             try
             {
-                var data = _context.Set<LoginModel>().ToList();
+                IEnumerable<RequestViewModel> data = from request in _context.Set<RequestModel>()
+                                                     join user in _context.Set<LoginModel>() on request.UserId equals user.UserId
+
+                                                     select new RequestViewModel
+                                                     {
+                                                         RequestId = request.RequestId,
+                                                         UserName = user.UserName,
+                                                         Comment = request.Comment,
+                                                         Description = request.Description,
+                                                         IsApproved = request.IsApproved
+
+                                                     };
                 return Ok(data);
             }
             catch (Exception ex)
