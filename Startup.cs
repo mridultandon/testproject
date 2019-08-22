@@ -18,6 +18,7 @@ namespace TestProject
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
