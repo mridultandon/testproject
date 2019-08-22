@@ -1,0 +1,17 @@
+type:{{userType}}
+
+<div *ngIf="userType==1"><p>0</p></div>
+<div *ngIf="userType==2">
+    <table>
+        <tr>
+          <th *ngFor="let col of userList">
+            {{col.userName}}
+          </th>
+        </tr>
+        <tr *ngFor="let char of characters | async">
+          <td *ngFor="let col of columns">
+            {{char[col]}}
+          </td>
+        </tr>
+      </table>
+</div>
