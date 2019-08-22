@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TestProject.Entities;
 
 namespace TestProject.Controllers
 {
@@ -10,11 +11,20 @@ namespace TestProject.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly TestContext _context;
+            public ValuesController(TestContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<LoginModel>> Get()
         {
-            return new string[] { "value1", "value2" };
+
+            var data = _context.Set<LoginModel>().ToList();
+            return data;
+           
+           // return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

@@ -12,3 +12,17 @@ F:\Projects\Personal\TestProject\bin\Debug\netcoreapp2.2\TestProject.pdb
 F:\Projects\Personal\TestProject\obj\Debug\netcoreapp2.2\TestProject.RazorTargetAssemblyInfo.cache
 F:\Projects\Personal\TestProject\obj\Debug\netcoreapp2.2\TestProject.dll
 F:\Projects\Personal\TestProject\obj\Debug\netcoreapp2.2\TestProject.pdb
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\bin\Debug\netcoreapp2.2\TestProject.deps.json
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\bin\Debug\netcoreapp2.2\TestProject.runtimeconfig.json
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\bin\Debug\netcoreapp2.2\TestProject.runtimeconfig.dev.json
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\bin\Debug\netcoreapp2.2\TestProject.dll
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\bin\Debug\netcoreapp2.2\TestProject.pdb
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.csprojAssemblyReference.cache
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.RazorAssemblyInfo.cache
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.RazorAssemblyInfo.cs
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.AssemblyInfoInputs.cache
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.AssemblyInfo.cs
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.RazorTargetAssemblyInfo.cache
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.dll
+C:\Users\mridult.IXCNEW\Downloads\testproject-master\testproject-master\obj\Debug\netcoreapp2.2\TestProject.pdb

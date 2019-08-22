@@ -5,6 +5,8 @@ namespace TestProject
 {
     public class TestContext : DbContext
     {
+
+
         public TestContext(DbContextOptions<TestContext> options) : base(options)
         {
 
@@ -14,6 +16,9 @@ namespace TestProject
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<LoginModel>().HasData(new {UserId = 1, UserName = "Mridul", Password = "123456", UserType = 1 },
+                new { UserId = 2, UserName = "Test", Password = "123456", UserType = 1 },
+                new { UserId = 3, UserName = "Admin", Password = "admin@12345", UserType = 2 });
 
         }
 
